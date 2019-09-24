@@ -1,44 +1,50 @@
 import React from "react";
-import sampleimage from "../sampleImage.png";
-import Axios from "axios";
 
 const divStyle = {
   display: "flex",
   flexFlow: "row no-wrap",
   alignItems: "center",
-  justifyContent: "center",
+  justifyContent: "left",
 
-  width: "300px",
+  width: "500px",
   borderRadius: "15px",
   padding: "15px",
   background: "white",
-  marginLeft: "15px"
+  margin: "1px 15px 5px"
+};
+
+const labelStyle = {
+  paddingLeft: "30px"
 };
 
 const imgStyle = {
   display: "flex",
-  borderRadius: "40px",
-  paddingRight: "10px"
+  borderRadius: "50px"
 };
 
 class Cardbox extends React.Component {
+  state = {
+    repos: []
+  };
+
   render() {
     return (
       <div style={divStyle}>
         <div>
           <img
+            alt={this.props.imagesAlt}
             style={imgStyle}
-            src={sampleimage}
-            width={"60px"}
-            height={"60px"}
+            src={this.props.imgsrc}
+            width={"50px"}
+            height={"50px"}
           />
         </div>
-        <div>
+        <div style={labelStyle}>
           <p>
             <b>name</b>
           </p>
           <p>
-            <b>localized name</b>
+            <b>Repos Name</b>
           </p>
         </div>
         <div>

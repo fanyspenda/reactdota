@@ -4,7 +4,7 @@ import Index from "./pages/index";
 const appStyle = {
   height: "100%",
   width: "100%",
-  background: "grey"
+  background: "#FCC0B3"
 };
 
 class App extends React.Component {
